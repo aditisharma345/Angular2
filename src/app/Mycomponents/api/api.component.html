@@ -1,0 +1,23 @@
+<p>api works!</p>
+<div>
+    <ul *ngFor="let user of users.entries.slice(0,5)">
+        <li >{{user.API}}---- {{user.Description}} </li>
+    </ul>
+</div>
+
+<p>post-api works!</p>
+<form #userform="ngForm" (ngSubmit)="getuser(userform.value)" >
+    <input type="text" name="name" id="name"  required ngModel placeholder="enter valid name"><br>
+    <input type="text" name="email" id="email" required ngModel placeholder="enter valid email"><br>
+    <input type="text" name="password" id="password" required ngModel placeholder="enter valid password"><br>
+    <button>Save</button>
+</form>
+
+<!-- API methods:PUT POST GET DELETE Patch -->
+<!-- PUT API method (Update/Replace) is used  to update an existing resource (if the resource does not exist, then API may decide to create a new resource or not-->
+<!-- DELETE API method delete the resources -->
+<!-- POST used to create a new resource-->
+<!-- GET used to read  resources-->
+<!-- Patch used to partial update or modify the resources. #it doesn't replace the whole resource. 
+command=HTTP PATCH /users/1
+[{ "op": "replace", "path": "/email", "value": "new.email@example.org" }]-->

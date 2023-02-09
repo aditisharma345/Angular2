@@ -1,0 +1,16 @@
+<p>{{title}}</p>
+<ul *ngFor="let data of memberdata">
+    <li>{{data.name}}----{{data.age}} </li>
+</ul>
+<h2>----</h2>
+<div>
+    <ul *ngFor="let user of users">
+        <li>
+            {{user.name}}---{{user.age}}
+        </li>
+    </ul>
+</div>
+<!--service are classes that may contain some data,properties or functions  -->
+<!-- they can be use in multiple modules. -->
+<!-- services are neither component dependent nor module dependent -->
+<!-- services are totally independent and they can be import in different modules and components -->
